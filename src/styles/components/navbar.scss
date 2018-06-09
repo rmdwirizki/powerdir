@@ -1,0 +1,15 @@
+$navbar-height: 4.5rem;
+
+.navbar-item.is-logo {
+  position: absolute;
+  left: 50%;
+  margin-left: -63px; // 50% in my case
+  height: 100%;
+
+  img {
+    max-height: 2rem;
+  }
+}
+.navbar-item > .button {
+  border-color: transparent !important;
+}

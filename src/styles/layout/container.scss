@@ -1,0 +1,11 @@
+.container {
+  overflow-x: auto;
+  transform: rotateX(180deg);
+  display: flex;
+  flex-direction: column;
+  flex-direction: column-reverse;
+  padding: 30px 30px 80px 30px;
+  & > * {
+    transform: rotateX(180deg);
+  }
+}

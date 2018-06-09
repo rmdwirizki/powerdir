@@ -1,0 +1,29 @@
+// $panel-heading-size: 1.1em;
+
+.Boxes {
+  &.has-left-shadow {
+    box-shadow: -7px 0 20px -7px rgba(0,0,0, 0.1);
+  }
+  &.has-right-shadow {
+    box-shadow: 7px 0 20px -7px rgba(0,0,0, 0.1);
+  }
+  &.has-left-shadow.has-right-shadow {
+    box-shadow: 7px 0 20px -7px rgba(0,0,0, 0.1), -7px 0 20px -7px rgba(0,0,0, 0.1);
+  }
+
+  & > * {
+    &:last-child {
+      padding-right: 30px;
+    }
+    &.ListItemBox {
+      margin-right: 20px;
+      min-width: 250px;
+    }
+    &.ReadItemBox {
+      min-width: 750px; 
+      .content {
+        width: 100%;
+      }
+    }
+  }
+}
