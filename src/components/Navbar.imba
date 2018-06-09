@@ -3,7 +3,7 @@ export tag Navbar
     <self>
       <nav.navbar.is-info>
         <div.navbar-brand>
-          <a.navbar-item.is-logo href="https://bulma.io">
+          <a.navbar-item.is-logo target="_blank" href="https://github.com/rmdwirizki/powerdir">
             <img src=(asset('logo-inverted.png')) attr:alt="Bulma: a modern CSS framework based on Flexbox">
           <div.navbar-burger.burger data-target="nav-menu">
             <span>
