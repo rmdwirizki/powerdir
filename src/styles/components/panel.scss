@@ -1,27 +1,46 @@
 $panel-heading-size: 1em;
 
-.Boxes {
+.boxes {
   & > * {
     .panel-block {
       align-items: flex-start;
       overflow: auto;
-      max-height: 460px;
-    }
-    &:last-child {
-      padding-right: 30px;
+      max-height: 458px; // Fallback
+      max-height: calc(100vh - 220px - #{$scroller-height});
+      
+      .panel-icon { line-height: inherit; padding-top: 2px; }
+      &:first-child { border-top: 0px; }
+      &.has-description { display: block; }
+      &.is-loading {
+        min-height: 458px; // Fallback
+        min-height: calc(100vh - 220px - #{$scroller-height});
+        display: flex; justify-content: center; align-items: center
+      }
     }
     &.ListItemBox {
-      margin-right: 20px;
+      max-width: 250px;
       min-width: 250px;
+      margin-right: 20px;
+
+      .panel-container { 
+        overflow: auto; 
+        max-height: 414px; // Fallback
+        max-height: calc(100vh - 264px - #{$scroller-height});
+        border-bottom: 1px solid #dbdbdb;
+
+        .panel-block:last-child { border-bottom: 0px }
+      }
     }
     &.ReadItemBox {
       min-width: 750px; 
-      .panel-block {
-        padding: 1em 1.25em;
-      }
-      .content {
-        width: 100%;
-      }
+      max-width: 750px; 
+      .panel-block { padding: 1em 1.25em; }
+      .content { width: 100%; }
+    }
+    &:last-child {
+      padding-right: 30px;
+      &.ListItemBox { min-width: 280px; max-width: 280px; }
+      &.ReadItemBox { min-width: 780px; max-width: 780px; }
     }
   }
 }

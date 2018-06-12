@@ -1,5 +1,8 @@
 $navbar-height: 3rem;
 
+.navbar.is-info {
+  border-bottom: 2px solid #3694d2;
+}
 .navbar-item.is-logo {
   position: absolute;
   left: 50%;
@@ -12,4 +15,8 @@ $navbar-height: 3rem;
 }
 .navbar-item > .button {
   border-color: transparent !important;
+}
+.navbar-item object {
+  height: 100%;
+  width: 100%;
 }

@@ -1,0 +1,11 @@
+$scroller-height: 15px;
+
+.TopScroller {
+  height: $scroller-height;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  .inner-scroller {
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+}

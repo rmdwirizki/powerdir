@@ -1,11 +1,20 @@
 .container {
-  overflow-x: auto;
-  transform: rotateX(180deg);
+  // 6px : border, margin, padding
+  height: calc(100vh - #{$navbar-height} - 6px - #{$scroller-height});
+  overflow-x: scroll;
+  overflow-y: hidden;
   display: flex;
   flex-direction: column;
-  flex-direction: column-reverse;
-  padding: 30px 30px 80px 30px;
-  & > * {
+  padding: 80px 30px 30px 30px;
+  
+  &.scroll-on-top {
+    flex-direction: column-reverse;
+    padding: 30px 30px 80px 30px;
     transform: rotateX(180deg);
+    & > * {
+      transform: rotateX(180deg);
+    }
   }
 }
+
+html { overflow: hidden !important; }
