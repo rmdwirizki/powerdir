@@ -4,7 +4,7 @@ export tag Breadcrumb
     boxes.splice index + 1, boxes:length - index + 1
   def render
     <self>
-      <nav.breadcrumb attr:aria-label="breadcrumbs">
+      <nav.breadcrumb.has-arrow-separator attr:aria-label="breadcrumbs">
         <ul>
           for box, index in boxes
             <li><a :tap.setActive(index)> box:name
