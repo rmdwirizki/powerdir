@@ -1,17 +1,12 @@
-// $panel-heading-size: 1.1em;
+$panel-heading-size: 1em;
 
 .Boxes {
-  &.has-left-shadow {
-    box-shadow: -7px 0 20px -7px rgba(0,0,0, 0.1);
-  }
-  &.has-right-shadow {
-    box-shadow: 7px 0 20px -7px rgba(0,0,0, 0.1);
-  }
-  &.has-left-shadow.has-right-shadow {
-    box-shadow: 7px 0 20px -7px rgba(0,0,0, 0.1), -7px 0 20px -7px rgba(0,0,0, 0.1);
-  }
-
   & > * {
+    .panel-block {
+      align-items: flex-start;
+      overflow: auto;
+      max-height: 460px;
+    }
     &:last-child {
       padding-right: 30px;
     }
@@ -21,6 +16,9 @@
     }
     &.ReadItemBox {
       min-width: 750px; 
+      .panel-block {
+        padding: 1em 1.25em;
+      }
       .content {
         width: 100%;
       }
