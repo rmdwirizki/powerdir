@@ -7,7 +7,7 @@ export tag ReadItemBox < ItemBox
       <nav.panel.m-b-0>
         <p.panel-heading .has-background-info=isLast .has-text-white=isLast>
           <i.icon-book attr:aria-hidden="true">
-          " " + box:name
+          " " + box:alias
         <div.panel-block .is-loading=box:loading>
           if box:loading
             <object data=(asset('loader.svg')) type="image/svg+xml">

@@ -12,6 +12,7 @@ export tag Boxes < Scroller
   def build
     Event.on 'boxloaded',  do |e| self.onboxloaded
     Event.on 'boxremoved', do |e| self.onboxremoved
+    Event.on 'syncscroll', do |e| self.sync
 
   def mount
     @syncedScroller = document.querySelector('.TopScroller.Scroller')
@@ -38,7 +39,7 @@ export tag Boxes < Scroller
     <self.container.syncscroll attr:name='box-scroller'>
       <div.boxes.is-flex>
         for box,index in Store:boxes
-          if box:type == 'list'
+          if box:type == 'directory'
             <ListItemBox box=box index=index>
-          elif box:type == 'read'
+          elif box:type == 'file'
             <ReadItemBox box=box index=index>

@@ -1,7 +1,7 @@
 import {Connect} from '../global/Connect.imba'
 import {Store} from '../global/Store.imba'
 
-import {SyncScroll} from '../lib/syncScroll.js'
+import {SyncScroll} from '../lib/SyncScroll.js'
 
 export tag Scroller
   prop domScroll

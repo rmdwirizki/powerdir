@@ -20,7 +20,7 @@ export tag ListItemBox < ItemBox
       <nav.panel.m-b-0>
         <p.panel-heading .has-background-info=isLast .has-text-white=isLast>
           <i.icon-folder attr:aria-hidden="true">
-          " " + box:name
+          " " + box:alias
         <div.panel-block>
           <p.control.has-icons-left>
             <input.input.is-small type="text" placeholder="Search">
@@ -30,13 +30,13 @@ export tag ListItemBox < ItemBox
         #   <a.is-active> "Tab One"
         #   <a> "Tab Two"
       <div.panel-container>
-        for item in box:items
+        for item in box:children
           <a.panel-block .has-description=hasDescription(item) .is-active=isActive(item) :tap.generate(item, index)>
             <span.panel-icon>
               if item:type == 'directory'
                 <i.icon-folder attr:aria-hidden="true">
               elif item:type == 'file'
                 <i.icon-book attr:aria-hidden="true">
-            <span> item:name
+            <span> item:alias
             if item:description
               <div><small> item:description
