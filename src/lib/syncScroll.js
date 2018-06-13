@@ -133,6 +133,6 @@
     //     window[addEventListener]("load", reset, 0);
     // }
 
-    exports.reset = reset;
+    exports.SyncScroll = reset;
 }));
 
