@@ -4,6 +4,8 @@ import {Store} from '../global/Store.imba'
 import {ItemBox} from './ItemBox.imba'
 
 export tag ListItemBox < ItemBox
+  prop filter default: ''
+
   def generate item, index
     if !self.isActive item
       Box.load item, index
@@ -15,15 +17,24 @@ export tag ListItemBox < ItemBox
   def hasDescription item
     return (item:description) ? true : false
 
+  def filterList e
+    const isMatch = do |item1, item2|
+      return item1.toLowerCase().indexOf(item2.toLowerCase()) > -1
+    setTimeout(&, 0) do
+      for item in box:children
+        item:hide = !isMatch item:name, e.target.value
+        item:hide = !isMatch item:description, e.target.value if item:description && item:hide
+      Imba.commit
+
   def render
     <self>
       <nav.panel.m-b-0>
         <p.panel-heading .has-background-info=isLast .has-text-white=isLast>
           <i.icon-folder attr:aria-hidden="true">
           " " + box:alias
-        <div.panel-block>
+        <div.panel-block .has-background-grey-lighter=(filter !== '')>
           <p.control.has-icons-left>
-            <input.input.is-small type="text" placeholder="Search">
+            <input.input.is-small[filter] :keydown.filterList :paste.filterList type="text" placeholder="Filter">
             <span.icon.is-small.is-left>
               <i.icon-search attr:aria-hiden="true">
         # <p.panel-tabs>
@@ -31,7 +42,7 @@ export tag ListItemBox < ItemBox
         #   <a> "Tab Two"
       <div.panel-container>
         for item in box:children
-          <a.panel-block .has-description=hasDescription(item) .is-active=isActive(item) :tap.generate(item, index)>
+          <a.panel-block .is-hidden=item:hide .has-description=hasDescription(item) .is-active=isActive(item) :tap.generate(item, index)>
             <span.panel-icon>
               if item:type == 'directory'
                 <i.icon-folder attr:aria-hidden="true">
