@@ -17,12 +17,16 @@ export tag ListItemBox < ItemBox
   def hasDescription item
     return (item:description) ? true : false
 
+  def clearFilter
+    @filter = ''
+    self.filterList
+    
   def filterList e
     const isMatch = do |item1, item2|
       return item1.toLowerCase().indexOf(item2.toLowerCase()) > -1
     setTimeout(&, 0) do
       for item in box:children
-        item:hide = !isMatch item:name, e.target.value
+        item:hide = !isMatch item:name, (e) ? e.target.value : @filter
         item:hide = !isMatch item:description, e.target.value if item:description && item:hide
       Imba.commit
 
@@ -37,6 +41,9 @@ export tag ListItemBox < ItemBox
             <input.input.is-small[filter] :keydown.filterList :paste.filterList type="text" placeholder="Filter">
             <span.icon.is-small.is-left>
               <i.icon-search attr:aria-hiden="true">
+        if filter !== ''
+          <div.panel-block.has-background-light.is-size-7 css:justify-content="center">
+            <a.has-text-grey :tap.clearFilter> "Clear Filter"
         # <p.panel-tabs>
         #   <a.is-active> "Tab One"
         #   <a> "Tab Two"
