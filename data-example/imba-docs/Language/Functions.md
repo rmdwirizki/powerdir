@@ -1,3 +1,7 @@
+---
+order: 3
+---
+
 There are two types of functions in Imba, *methods* and *blocks*.
 
 ## Methods

@@ -1,3 +1,9 @@
+---
+id: imba-router
+order: 1
+description: How to create a router in Imba
+---
+
 For most Single Page Applications, it’s recommended to use the [imba-router](https://github.com/somebee/imba-router) library. Check out this [6-part interactive screencast](https://scrimba.com/playlist/pMvYcg).
 
 ```imba

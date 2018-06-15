@@ -1,3 +1,8 @@
+---
+id: imba-performance
+order: 2
+---
+
 The virtual dom was a fantastic innovation. Because the process of updating / patching the dom to reflect state-changes became much faster, we could start writing our views in a declarative manner.
 
 Sadly, virtual doms are still quite slow. Imba has chosen a very different approach that turns out to be *a lot* faster.

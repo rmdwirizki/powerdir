@@ -1,0 +1,409 @@
+{
+  "path": "./data-example/imba-docs",
+  "name": "imba-docs",
+  "children": [
+    {
+      "path": "data-example/imba-docs/Advanced",
+      "name": "Advanced",
+      "children": [
+        {
+          "path": "data-example/imba-docs/Advanced/Imba Router.md",
+          "name": "Imba Router.md",
+          "extension": ".md",
+          "type": "file",
+          "id": "SkEh3lbZm"
+        },
+        {
+          "path": "data-example/imba-docs/Advanced/Performance.md",
+          "name": "Performance.md",
+          "extension": ".md",
+          "type": "file",
+          "id": "H1eEn3xWZm"
+        },
+        {
+          "path": "data-example/imba-docs/Advanced/meta.json",
+          "name": "meta.json",
+          "extension": ".json",
+          "type": "file",
+          "id": "S1bV2hl-WX"
+        }
+      ],
+      "type": "directory",
+      "id": "ryGVh3xbZQ"
+    },
+    {
+      "path": "data-example/imba-docs/Essentials",
+      "name": "Essentials",
+      "children": [
+        {
+          "path": "data-example/imba-docs/Essentials/1. Introduction",
+          "name": "1. Introduction",
+          "children": [
+            {
+              "path": "data-example/imba-docs/Essentials/1. Introduction/1. What is Imba?.md",
+              "name": "1. What is Imba?.md",
+              "extension": ".md",
+              "type": "file",
+              "id": "SkmN2neWZm"
+            },
+            {
+              "path": "data-example/imba-docs/Essentials/1. Introduction/2. Syntax & Semantics.md",
+              "name": "2. Syntax & Semantics.md",
+              "extension": ".md",
+              "type": "file",
+              "id": "r1VNnnxb-X"
+            },
+            {
+              "path": "data-example/imba-docs/Essentials/1. Introduction/3. Getting Started.md",
+              "name": "3. Getting Started.md",
+              "extension": ".md",
+              "type": "file",
+              "id": "Hkr4nhxZWQ"
+            },
+            {
+              "path": "data-example/imba-docs/Essentials/1. Introduction/meta.json",
+              "name": "meta.json",
+              "extension": ".json",
+              "type": "file",
+              "id": "H1UEn2gZb7"
+            }
+          ],
+          "type": "directory",
+          "id": "ByPVnnx-ZX"
+        },
+        {
+          "path": "data-example/imba-docs/Essentials/2. Tag Syntax",
+          "name": "2. Tag Syntax",
+          "children": [
+            {
+              "path": "data-example/imba-docs/Essentials/2. Tag Syntax/1. Instantiating Tags.md",
+              "name": "1. Instantiating Tags.md",
+              "extension": ".md",
+              "type": "file",
+              "id": "HkOE33e--X"
+            },
+            {
+              "path": "data-example/imba-docs/Essentials/2. Tag Syntax/2. Conditional Classes.md",
+              "name": "2. Conditional Classes.md",
+              "extension": ".md",
+              "type": "file",
+              "id": "HJKE2heWWm"
+            },
+            {
+              "path": "data-example/imba-docs/Essentials/2. Tag Syntax/3. Dynamic Classes.md",
+              "name": "3. Dynamic Classes.md",
+              "extension": ".md",
+              "type": "file",
+              "id": "HJ5432g--7"
+            },
+            {
+              "path": "data-example/imba-docs/Essentials/2. Tag Syntax/4. Setting Inline Styles.md",
+              "name": "4. Setting Inline Styles.md",
+              "extension": ".md",
+              "type": "file",
+              "id": "rJsEnngb-X"
+            },
+            {
+              "path": "data-example/imba-docs/Essentials/2. Tag Syntax/5. Setting Custom Data.md",
+              "name": "5. Setting Custom Data.md",
+              "extension": ".md",
+              "type": "file",
+              "id": "SJnEn3g-bm"
+            },
+            {
+              "path": "data-example/imba-docs/Essentials/2. Tag Syntax/6. Rendering Lists.md",
+              "name": "6. Rendering Lists.md",
+              "extension": ".md",
+              "type": "file",
+              "id": "Sy6Vh3x-WQ"
+            },
+            {
+              "path": "data-example/imba-docs/Essentials/2. Tag Syntax/7. Conditional Rendering.md",
+              "name": "7. Conditional Rendering.md",
+              "extension": ".md",
+              "type": "file",
+              "id": "SJAVh3e--7"
+            },
+            {
+              "path": "data-example/imba-docs/Essentials/2. Tag Syntax/8. Reactive Rendering.md",
+              "name": "8. Reactive Rendering.md",
+              "extension": ".md",
+              "type": "file",
+              "id": "rJJeNh3xWZ7"
+            },
+            {
+              "path": "data-example/imba-docs/Essentials/2. Tag Syntax/9. Rendering into Document.md",
+              "name": "9. Rendering into Document.md",
+              "extension": ".md",
+              "type": "file",
+              "id": "Skee4nhgZZ7"
+            },
+            {
+              "path": "data-example/imba-docs/Essentials/2. Tag Syntax/meta.json",
+              "name": "meta.json",
+              "extension": ".json",
+              "type": "file",
+              "id": "HJWl4n2l-ZX"
+            }
+          ],
+          "type": "directory",
+          "id": "BkzeE23gZZQ"
+        },
+        {
+          "path": "data-example/imba-docs/Essentials/3. Custom Tags",
+          "name": "3. Custom Tags",
+          "children": [
+            {
+              "path": "data-example/imba-docs/Essentials/3. Custom Tags/1. Declaring Tags.md",
+              "name": "1. Declaring Tags.md",
+              "extension": ".md",
+              "type": "file",
+              "id": "HyXxV3hlbbm"
+            },
+            {
+              "path": "data-example/imba-docs/Essentials/3. Custom Tags/2. Custom Rendering.md",
+              "name": "2. Custom Rendering.md",
+              "extension": ".md",
+              "type": "file",
+              "id": "SyNxV3heWZm"
+            },
+            {
+              "path": "data-example/imba-docs/Essentials/3. Custom Tags/3. Inheritance.md",
+              "name": "3. Inheritance.md",
+              "extension": ".md",
+              "type": "file",
+              "id": "SyHgEnne-ZX"
+            },
+            {
+              "path": "data-example/imba-docs/Essentials/3. Custom Tags/4. Properties.md",
+              "name": "4. Properties.md",
+              "extension": ".md",
+              "type": "file",
+              "id": "rkUeNh2xbZ7"
+            },
+            {
+              "path": "data-example/imba-docs/Essentials/3. Custom Tags/meta.json",
+              "name": "meta.json",
+              "extension": ".json",
+              "type": "file",
+              "id": "BywgN23lZ-Q"
+            }
+          ],
+          "type": "directory",
+          "id": "BkuxEhnxb-X"
+        },
+        {
+          "path": "data-example/imba-docs/Essentials/4. Event Handling",
+          "name": "4. Event Handling",
+          "children": [
+            {
+              "path": "data-example/imba-docs/Essentials/4. Event Handling/1. Listening to Events.md",
+              "name": "1. Listening to Events.md",
+              "extension": ".md",
+              "type": "file",
+              "id": "rkKeN33xWb7"
+            },
+            {
+              "path": "data-example/imba-docs/Essentials/4. Event Handling/2. Resolving Handlers.md",
+              "name": "2. Resolving Handlers.md",
+              "extension": ".md",
+              "type": "file",
+              "id": "rJqgEh3lbWX"
+            },
+            {
+              "path": "data-example/imba-docs/Essentials/4. Event Handling/3. Event Modifiers.md",
+              "name": "3. Event Modifiers.md",
+              "extension": ".md",
+              "type": "file",
+              "id": "rkieVh2xZ-m"
+            },
+            {
+              "path": "data-example/imba-docs/Essentials/4. Event Handling/4. Declaring Default Handlers.md",
+              "name": "4. Declaring Default Handlers.md",
+              "extension": ".md",
+              "type": "file",
+              "id": "H12g423xbZQ"
+            },
+            {
+              "path": "data-example/imba-docs/Essentials/4. Event Handling/5. Custom Events.md",
+              "name": "5. Custom Events.md",
+              "extension": ".md",
+              "type": "file",
+              "id": "rk6lVh2lWb7"
+            },
+            {
+              "path": "data-example/imba-docs/Essentials/4. Event Handling/6. Event Interface.md",
+              "name": "6. Event Interface.md",
+              "extension": ".md",
+              "type": "file",
+              "id": "HJ0gEnngb-m"
+            },
+            {
+              "path": "data-example/imba-docs/Essentials/4. Event Handling/meta.json",
+              "name": "meta.json",
+              "extension": ".json",
+              "type": "file",
+              "id": "SkkZ43neWbX"
+            }
+          ],
+          "type": "directory",
+          "id": "rkg-4n2lZWQ"
+        },
+        {
+          "path": "data-example/imba-docs/Essentials/5. Form Input Bindings",
+          "name": "5. Form Input Bindings",
+          "children": [
+            {
+              "path": "data-example/imba-docs/Essentials/5. Form Input Bindings/Basic Usage.md",
+              "name": "Basic Usage.md",
+              "extension": ".md",
+              "type": "file",
+              "id": "S1bZVh2eW-X"
+            },
+            {
+              "path": "data-example/imba-docs/Essentials/5. Form Input Bindings/meta.json",
+              "name": "meta.json",
+              "extension": ".json",
+              "type": "file",
+              "id": "ByfWEnngbZX"
+            }
+          ],
+          "type": "directory",
+          "id": "rymbNnhebb7"
+        },
+        {
+          "path": "data-example/imba-docs/Essentials/6. State Management.md",
+          "name": "6. State Management.md",
+          "extension": ".md",
+          "type": "file",
+          "id": "rJ4W423lb-X"
+        },
+        {
+          "path": "data-example/imba-docs/Essentials/7. Examples",
+          "name": "7. Examples",
+          "children": [
+            {
+              "path": "data-example/imba-docs/Essentials/7. Examples/1. Filtering List.md",
+              "name": "1. Filtering List.md",
+              "extension": ".md",
+              "type": "file",
+              "id": "BySWE2ng-Zm"
+            },
+            {
+              "path": "data-example/imba-docs/Essentials/7. Examples/2. Master - Details.md",
+              "name": "2. Master - Details.md",
+              "extension": ".md",
+              "type": "file",
+              "id": "HyU-4n2gbWX"
+            },
+            {
+              "path": "data-example/imba-docs/Essentials/7. Examples/3. Simple Todo List.md",
+              "name": "3. Simple Todo List.md",
+              "extension": ".md",
+              "type": "file",
+              "id": "BkvWE3neW-Q"
+            },
+            {
+              "path": "data-example/imba-docs/Essentials/7. Examples/meta.json",
+              "name": "meta.json",
+              "extension": ".json",
+              "type": "file",
+              "id": "BJuZN23ebb7"
+            }
+          ],
+          "type": "directory",
+          "id": "B1tW4n2xW-X"
+        },
+        {
+          "path": "data-example/imba-docs/Essentials/meta.json",
+          "name": "meta.json",
+          "extension": ".json",
+          "type": "file",
+          "id": "HJ9bE23g--m"
+        }
+      ],
+      "type": "directory",
+      "id": "HJj-Nn2e-WX"
+    },
+    {
+      "path": "data-example/imba-docs/Language",
+      "name": "Language",
+      "children": [
+        {
+          "path": "data-example/imba-docs/Language/Await.md",
+          "name": "Await.md",
+          "extension": ".md",
+          "type": "file",
+          "id": "Synb433lZZ7"
+        },
+        {
+          "path": "data-example/imba-docs/Language/Basics.md",
+          "name": "Basics.md",
+          "extension": ".md",
+          "type": "file",
+          "id": "HJTWNn2ebZm"
+        },
+        {
+          "path": "data-example/imba-docs/Language/Caveats.md",
+          "name": "Caveats.md",
+          "extension": ".md",
+          "type": "file",
+          "id": "Hk0-N3nl--7"
+        },
+        {
+          "path": "data-example/imba-docs/Language/Classes.md",
+          "name": "Classes.md",
+          "extension": ".md",
+          "type": "file",
+          "id": "SkyGN2nlbWm"
+        },
+        {
+          "path": "data-example/imba-docs/Language/Functions.md",
+          "name": "Functions.md",
+          "extension": ".md",
+          "type": "file",
+          "id": "r1xfN2heZW7"
+        },
+        {
+          "path": "data-example/imba-docs/Language/Loops.md",
+          "name": "Loops.md",
+          "extension": ".md",
+          "type": "file",
+          "id": "BkWzN3nxb-Q"
+        },
+        {
+          "path": "data-example/imba-docs/Language/Modules.md",
+          "name": "Modules.md",
+          "extension": ".md",
+          "type": "file",
+          "id": "ryfMNnng-bm"
+        },
+        {
+          "path": "data-example/imba-docs/Language/Tags.md",
+          "name": "Tags.md",
+          "extension": ".md",
+          "type": "file",
+          "id": "S1XMNn2xZ-m"
+        },
+        {
+          "path": "data-example/imba-docs/Language/meta.json",
+          "name": "meta.json",
+          "extension": ".json",
+          "type": "file",
+          "id": "SJEMN33xb-X"
+        }
+      ],
+      "type": "directory",
+      "id": "r1HM423gZ-X"
+    },
+    {
+      "path": "data-example/imba-docs/meta.json",
+      "name": "meta.json",
+      "extension": ".json",
+      "type": "file",
+      "id": "Sy8MVhhebbX"
+    }
+  ],
+  "type": "directory",
+  "id": "SyDME3hxWWX"
+}
