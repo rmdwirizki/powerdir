@@ -27,6 +27,7 @@ export tag ListItemBox < ItemBox
     setTimeout(&, 0) do
       for item in box:children
         item:hide = !isMatch item:name, (e) ? e.target.value : @filter
+        item:hide = !isMatch item:alias, e.target.value if item:alias && item:hide
         item:hide = !isMatch item:description, e.target.value if item:description && item:hide
       Imba.commit
 
