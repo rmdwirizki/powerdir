@@ -56,5 +56,4 @@ export tag ListItemBox < ItemBox
               elif item:type == 'file'
                 <i.icon-book attr:aria-hidden="true">
             <span> item:alias
-            if item:description
-              <div><small> item:description
+            <div><small> item:description if item:description

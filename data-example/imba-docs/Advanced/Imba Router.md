@@ -1,5 +1,6 @@
 ---
 id: imba-router
+title: Imba RRRRouter
 order: 1
 description: How to create a router in Imba
 ---

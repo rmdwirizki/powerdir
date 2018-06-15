@@ -2,6 +2,8 @@ import {Connect} from './Connect.imba'
 import {Store} from './Store.imba'
 import {EventDispatcher as Event} from './EventDispatcher.imba'
 
+const frontMatter = require('@egoist/front-matter');
+
 class Box
   prop isFetching default: {status: false, id: -1}
 
@@ -14,7 +16,7 @@ class Box
 
   def create node, box={}
     box = Object.assign {}, {}, node
-    box:alias = self.removeNumbering node:name
+    box:alias = node:title || self.removeNumbering node:name
 
     if node:type == 'directory'
       self.isFetching:status = false
@@ -22,10 +24,15 @@ class Box
       box:children = []
       for child, i in node:children
         if child:name !== 'meta.json'
-          child:alias = self.removeNumbering child:name
-          # child:description = 'Lorem ipsum dolor sit amet lorem ipsum dolor sit amet'
+          child:alias = child:title || self.removeNumbering child:name
           box:children.push child
-
+      
+      box:children.sort do |a, b|
+        if a:order && b:order
+          return -1 if a:order < b:order
+          return  1 if a:order > b:order
+        return 0
+      
     elif node:type == 'file'
       box:content = ''
       box:loading = true
@@ -36,14 +43,15 @@ class Box
       # Run on separate thread
       Connect.async do
         const fetchId = self.isFetching:id
-        const content = await Connect.fetchData node:path
+        let content = await Connect.fetchData node:path
+        content = frontMatter content
 
         if self.isFetching:status && self.isFetching:id == fetchId
           let index = node:index
           index++ if Store:boxes[index + 1]
 
           Store:boxes[index]:loading = false
-          Store:boxes[index]:content = content
+          Store:boxes[index]:content = content:body
           
           self.isFetching:status = false
         
@@ -52,6 +60,7 @@ class Box
     return box
 
   def load node, index=-1, trigger=true
+    # TODO add index parameter to create, don't be like this
     let box = self.create Object.assign node, {}, {index: index}
 
     if index > -1
