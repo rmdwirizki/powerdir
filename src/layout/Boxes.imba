@@ -2,6 +2,8 @@ import {Connect} from '../global/Connect.imba'
 import {Store} from '../global/Store.imba'
 import {EventDispatcher as Event} from '../global/EventDispatcher.imba'
 
+import {HorizontalScroll} from '../lib/HorizontalScroll.js'
+
 import {Scroller} from '../components/Scroller.imba'
 import {ListItemBox} from '../components/ListItemBox.imba'
 import {ReadItemBox} from '../components/ReadItemBox.imba'
@@ -17,6 +19,7 @@ export tag Boxes < Scroller
   def mount
     @syncedScroller = document.querySelector('.TopScroller.Scroller')
     super
+    HorizontalScroll(@domScroll)
 
   def sync
     await Connect.timeout 100, do @offsetWidth = @domScroll:offsetWidth
