@@ -1,4 +1,9 @@
+import {EventDispatcher as Event} from '../global/EventDispatcher.imba'
+
 export tag Navbar
+  def openSearchPanel
+    Event.trigger 'searchpanelopened'
+    
   def render
     <self>
       <nav.navbar.is-info>
@@ -11,6 +16,13 @@ export tag Navbar
             <span>
 
         <div.navbar-menu id="nav-menu">
+          <div.navbar-start>
+            <div.navbar-item>
+              <a.button.has-background-link.has-text-white :tap.prevent.openSearchPanel>
+                <span.icon>
+                  <i.icon-search attr:aria-hiden="true">
+                <span>
+                  "Quick Search"
           <div.navbar-end>
             <div.navbar-item>
               <a.button.has-background-info.has-text-white  target="_blank" href="https://github.com/rmdwirizki/powerdir">

@@ -126,4 +126,20 @@ class Box
 
     return; # End of line return bug
 
+  def searchByKeyword keyword
+    return [] if keyword === "" || keyword:length <= 1
+    const isMatch = do |item1, item2|
+      return item1.toLowerCase().indexOf(item2.toLowerCase()) > -1
+    let boxes = []
+    const walk = do |node|
+      if node:name !== 'meta.json'
+        if isMatch(node:name, keyword) || (node:title && isMatch(node:title, keyword)) || (node:description && isMatch(node:description, keyword))
+          node:alias = node:title || self.removeNumbering node:name
+          boxes.push node
+      if node:children
+        for child, index in node:children
+          walk child
+    walk Store:tree
+    return boxes
+
 export var Box = Box.new

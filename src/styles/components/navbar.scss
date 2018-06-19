@@ -1,7 +1,9 @@
 $navbar-height: 3rem;
 
-.navbar.is-info {
-  border-bottom: 2px solid #3694d2;
+.navbar {
+  border-bottom: 2px solid;
+  &.is-info { border-color: #3694d2; }
+  &.is-link { border-color: #266cdd; }
 }
 .navbar-item.is-logo {
   position: absolute;

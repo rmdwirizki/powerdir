@@ -23,6 +23,12 @@
       "css": "folder",
       "code": 59394,
       "src": "entypo"
+    },
+    {
+      "uid": "c759418c008e9562944080fee617fc76",
+      "css": "cancel-circled",
+      "code": 59395,
+      "src": "entypo"
     }
   ]
 }

@@ -9,6 +9,7 @@ import {Store} from './global/Store.imba'
 import {EventDispatcher as Event} from './global/EventDispatcher.imba'
 
 import {Navbar} from './layout/Navbar.imba'
+import {SearchPanel} from './layout/SearchPanel.imba'
 import {TopScroller} from './layout/TopScroller.imba'
 import {Breadcrumb} from './layout/Breadcrumb.imba'
 import {Boxes} from './layout/Boxes.imba'
@@ -37,6 +38,7 @@ tag Home
   def render
     <self>
       <Navbar>
+      <SearchPanel>
       <TopScroller>
       <Breadcrumb>
       <Boxes>
