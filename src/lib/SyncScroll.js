@@ -1,12 +1,3 @@
-/**
- * @fileoverview syncscroll - scroll several areas simultaniously
- * @version 0.0.3
- * 
- * @license MIT, see http://github.com/asvd/intence
- * @copyright 2015 asvd <heliosframework@gmail.com> 
- */
-
-
 (function (root, factory) {
     if (typeof define === 'function' && define.amd) {
         define(['exports'], factory);
@@ -127,12 +118,6 @@
         }
     }
     
-    // if (document.readyState == "complete") {
-    //     reset();
-    // } else {
-    //     window[addEventListener]("load", reset, 0);
-    // }
-
     exports.SyncScroll = reset;
 }));
 

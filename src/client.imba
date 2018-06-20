@@ -1,4 +1,3 @@
-import './styles/appStyles.scss'
 import './global/Extend.imba'
 
 import {Router} from 'imba-router'
