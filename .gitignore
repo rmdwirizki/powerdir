@@ -1,2 +1,6 @@
 node_modules/
 dist/bundle.js
+dist/style.css
+index.html
+data-example/imba-docs/tree.json
+data-example/imba-docs/tree-clean.json
