@@ -1,3 +1,4 @@
+import './lib/Polyfill.imba'
 import './global/Extend.imba'
 
 import {Router} from 'imba-router'
