@@ -1,4 +1,3 @@
-import './lib/Polyfill.imba'
 import './global/Extend.imba'
 
 import {Router} from 'imba-router'
@@ -13,6 +12,8 @@ import {SearchPanel} from './layout/SearchPanel.imba'
 import {TopScroller} from './layout/TopScroller.imba'
 import {Breadcrumb} from './layout/Breadcrumb.imba'
 import {Boxes} from './layout/Boxes.imba'
+
+console.log 'tes'
 
 tag Home
   def build

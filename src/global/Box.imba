@@ -2,7 +2,7 @@ import {Connect} from './Connect.imba'
 import {Store} from './Store.imba'
 import {EventDispatcher as Event} from './EventDispatcher.imba'
 
-const frontMatter = require('@egoist/front-matter');
+import {Frontmatter} from '../lib/Frontmatter.js'
 
 class Box
   prop isFetching default: {status: false, id: -1}
@@ -44,7 +44,7 @@ class Box
       Connect.async do
         const fetchId = self.isFetching:id
         let content = await Connect.fetchData node:path
-        content = frontMatter content
+        content = Frontmatter content
 
         if self.isFetching:status && self.isFetching:id == fetchId
           let index = node:index

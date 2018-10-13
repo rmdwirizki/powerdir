@@ -1,7 +1,2 @@
 node_modules/
-dist/*.js
-dist/*.css
-dist/fonts/
-index.html
-data-example/imba-docs/tree.json
-data-example/imba-docs/tree-clean.json
+dist/build/dev/
