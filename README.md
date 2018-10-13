@@ -25,10 +25,10 @@
 
 ## Webpack Optimization Tasks List
 
-[x] JS Minify
-[x] Content Hashing
-[x] ES5 + Polyfill to Support for Edge and IE11
-[x] Gzip compression
-[ ] Split chunks by page
-[ ] Use ESM as long as possible to leverage Tree Shaking Ability
-[ ] CSS in JS
+- [x] JS Minify
+- [x] Content Hashing
+- [x] ES5 + Polyfill to Support for Edge and IE11
+- [x] Gzip compression
+- [ ] Split chunks by page
+- [ ] Use ESM as long as possible to leverage Tree Shaking Ability
+- [ ] CSS in JS
