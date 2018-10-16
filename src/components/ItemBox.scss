@@ -1,0 +1,17 @@
+.ItemBox {
+  .panel-block {
+    align-items: flex-start;
+    overflow: auto;
+    max-height: 458px; // Fallback
+    max-height: calc(100vh - 220px - #{$scroller-height});
+    
+    .panel-icon { line-height: inherit; padding-top: 2px; }
+    &:first-child { border-top: 0px; }
+    &.is-loading {
+      min-height: 458px; // Fallback
+      min-height: calc(100vh - 220px - #{$scroller-height});
+      display: flex; justify-content: center; align-items: center
+    }
+  }
+  &:last-child { padding-right: 30px }
+}

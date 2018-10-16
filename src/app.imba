@@ -2,8 +2,7 @@ import './global/Extend.imba'
 
 import {Router} from 'imba-router'
 
-import {Connect} from './global/Connect.imba'
-import {Box} from './global/Box.imba'
+import {Box} from './core/Box.imba'
 import {Store} from './global/Store.imba'
 import {EventDispatcher as Event} from './global/EventDispatcher.imba'
 
@@ -12,8 +11,6 @@ import {SearchPanel} from './layout/SearchPanel.imba'
 import {TopScroller} from './layout/TopScroller.imba'
 import {Breadcrumb} from './layout/Breadcrumb.imba'
 import {Boxes} from './layout/Boxes.imba'
-
-console.log 'tes'
 
 tag Home
   def build

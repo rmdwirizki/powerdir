@@ -1,4 +1,4 @@
-.container {
+.Boxes {
   // 6px : border, margin, padding
   height: calc(100vh - #{$navbar-height} - 6px - #{$scroller-height});
   overflow-x: scroll;
@@ -16,5 +16,3 @@
     }
   }
 }
-
-html { overflow: hidden !important; }

@@ -1,0 +1,43 @@
+/****************************/
+/****** GLOBAL SETTING ******/
+/****************************/
+
+$navbar-height: 3rem;
+$panel-heading-size: 1em;
+$scroller-height: 15px;
+
+/****************************/
+/******** Components ********/
+/****************************/
+
+@import '../dist/static/fontello/css/fontello.css';
+
+@import 'lib/Helpers.scss';
+
+@import 'layout/TopScroller.scss';
+@import 'layout/Navbar.scss';
+@import 'layout/Breadcrumb.scss';
+@import 'layout/Boxes.scss';
+@import 'layout/SearchPanel.scss';
+
+@import 'components/ItemBox.scss';
+@import 'components/ListItemBox.scss';
+@import 'components/ReadItemBox.scss';
+
+@import 'bulma/sass/utilities/_all.sass';
+@import 'bulma/sass/base/_all.sass';
+@import 'bulma/sass/grid/columns.sass';
+@import 'bulma/sass/elements/icon.sass';
+@import 'bulma/sass/elements/button.sass';
+@import 'bulma/sass/elements/form.sass';
+@import 'bulma/sass/elements/content.sass';
+@import 'bulma/sass/components/navbar.sass';
+@import 'bulma/sass/components/breadcrumb.sass';
+@import 'bulma/sass/components/panel.sass';
+@import 'bulma/sass/components/card.sass';
+
+/****************************/
+/******** APP STYLES ********/
+/****************************/
+
+html { overflow: hidden !important; }

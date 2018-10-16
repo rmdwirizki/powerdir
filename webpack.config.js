@@ -30,18 +30,13 @@ module.exports = (env, argv) => {
 	const buildPath = 'dist/build/' + ((isDev) ? 'dev' : ((isES5) ? 'prod-es5' : 'prod'))
 
 	return {
-		entry: isDev ? [
-			'./src/app.imba', './src/styles/main.scss'
-		] : Object.assign(isES5 ? {
+		entry: isDev ? ['./src/App.imba', './src/App.scss'] : Object.assign(isES5 ? {
 			'polyfill': [
 				'./node_modules/babel-polyfill/browser.js', 
 				'./node_modules/whatwg-fetch/fetch.js',
 				'./node_modules/custom-event-polyfill/polyfill.js'
 			]
-		} : {}, {
-			'main': './src/app.imba', 
-			'style-loader': './src/styles/main.scss'
-		}),
+		} : {}, {'main': './src/App.imba'}),
 		output: {
 			path: __dirname + '/' + buildPath, 
 			filename: '[name].[chunkhash].js'
@@ -50,7 +45,7 @@ module.exports = (env, argv) => {
 			splitChunks: {
 				chunks: 'all', 
 				cacheGroups: {
-					utilities: {
+					util: {
 						test: /[\\/]src[\\/](global|lib)[\\/]/,
 						minSize: 0
 					}
@@ -119,9 +114,9 @@ module.exports = (env, argv) => {
 			}) },
 			{ exclude: isDev, plugin: new MinifyPlugin({}, { test: /\.js($|\?)/i }) },
 			{ plugin: new webpack.DefinePlugin({ 
-				BUILD_PATH: buildPath,
 				ES5: isES5,
-				PRODUCTION: !isDev
+				PRODUCTION: !isDev,
+				BUILD_PATH: buildPath
 			}) },
 			{ exclude: isDev, plugin: new CompressionPlugin({
 				compressionOptions: { 

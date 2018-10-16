@@ -1,6 +1,6 @@
-import {Connect} from './Connect.imba'
-import {Store} from './Store.imba'
-import {EventDispatcher as Event} from './EventDispatcher.imba'
+import {Connect} from '../global/Connect.imba'
+import {Store} from '../global/Store.imba'
+import {EventDispatcher as Event} from '../global/EventDispatcher.imba'
 
 import {Frontmatter} from '../lib/Frontmatter.js'
 
@@ -8,7 +8,7 @@ class Box
   prop isFetching default: {status: false, id: -1}
 
   def fetchTree
-    Store:tree = await Connect.fetchData('data-example/imba-docs/tree.json', true)
+    Store:tree = await Connect.fetchData(Store:docs:path + 'tree.json', true)
     
   # Remove leading number
   def removeNumbering str
@@ -100,7 +100,7 @@ class Box
 
     if item
       let path = item:path
-      path = path.split('data-example/')
+      path = path.split(Store:docs:root)
       path = path[1].split('/')
       
       Store:boxes = [] # Reset boxes items

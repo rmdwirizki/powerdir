@@ -1,4 +1,4 @@
-import {Box} from '../global/Box.imba'
+import {Box} from '../core/Box.imba'
 import {Store} from '../global/Store.imba'
 
 export tag Breadcrumb

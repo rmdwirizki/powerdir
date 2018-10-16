@@ -1,5 +1,5 @@
 import {ItemBox} from './ItemBox.imba'
-import {Markdown} from './Markdown.imba'
+import {Marked} from '../lib/Marked.js'
 
 export tag ReadItemBox < ItemBox
   def render
@@ -9,7 +9,5 @@ export tag ReadItemBox < ItemBox
           <i.icon-book attr:aria-hidden="true">
           " " + box:alias
         <div.panel-block .is-loading=box:loading>
-          if box:loading
-            <object data=(asset('loader.svg')) type="image/svg+xml">
-          else
-            <Markdown.content content=box:content>
+          <object .is-hidden=!box:loading data=(asset('loader.svg')) type="image/svg+xml">
+          <div.content .is-hidden=box:loading html=Marked(box:content)>

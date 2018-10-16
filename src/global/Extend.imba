@@ -1,3 +1,5 @@
+import {Connect} from './Connect.imba'
+
 extend tag element
   def asset resource=''
     # remove filename from path (index.html / index.es5.html)
@@ -9,7 +11,11 @@ extend tag element
   def setText text
     if text != @tree_ # ad
       var val = text === null or text === false ? '' : text
-      (@text_ or @dom):textContent = val if (@text_ or @dom):outerHTML != undefined
+      var tod = @text_ or @dom
+      if tod:outerHTML == undefined
+        Connect.timeout 0, do tod:textContent = val  
+      else
+        tod:textContent = val
       @text_ ||= @dom:firstChild
       @tree_ = text
     self

@@ -29,7 +29,7 @@
 - [x] Assets Hashing
 - [x] ES5 + Polyfill to Support Edge and IE11
 - [x] Gzip compression
-- [ ] Split chunks by page
-- [ ] Use ESM as long as possible to leverage Tree Shaking Ability
-- [ ] CSS in JS
+- [x] Use ESM as long as possible to leverage Tree Shaking Ability
+- [x] Component based CSS
 - [ ] Service Worker
+- [ ] Server-side Rendering

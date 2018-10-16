@@ -1,7 +1,5 @@
-function init(el) {
-  if (!el) {
-    return;
-  }
+export function HorizontalScroll(el) {
+  if (!el) return;
 
   function hasScrolledContent(target, hasScroll=false) {
     if (target != el) {
@@ -27,9 +25,8 @@ function init(el) {
   if (el.addEventListener) {
     el.addEventListener('mousewheel', scrollHorizontally, false);
     el.addEventListener('DOMMouseScroll', scrollHorizontally, false);
-  } else {
+  } 
+  else {
     el.attachEvent('onmousewheel', scrollHorizontally);
   }
 }
-
-exports.HorizontalScroll = init;

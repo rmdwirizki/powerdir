@@ -1,11 +1,12 @@
 class Connect
   prop prefix default: '/powerdir/'
 
-  def timeout miliseconds=100, callback=null
+  def timeout miliseconds=100, callback=null, resolveValue=null
     return Promise.new do |resolve|
       return window.setTimeout(&, miliseconds) do 
         callback && callback()
-        resolve()
+        resolve() if !resolveValue
+        resolve(resolveValue) if resolveValue
 
   def async callback
     self.timeout 0, callback
