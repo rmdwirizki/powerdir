@@ -36,7 +36,10 @@ module.exports = (env, argv) => {
 				'./node_modules/whatwg-fetch/fetch.js',
 				'./node_modules/custom-event-polyfill/polyfill.js'
 			]
-		} : {}, {'main': './src/App.imba'}),
+		} : {}, {
+			'main': './src/App.imba', 
+			'style-loader': './src/App.scss'
+		}),
 		output: {
 			path: __dirname + '/' + buildPath, 
 			filename: '[name].[chunkhash].js'
