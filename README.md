@@ -4,6 +4,8 @@
 
 ## How to run
 
+- Clone this repo on a localhost (server) environment `git clone https://github.com/rmdwirizki/powerdir.git`
+- Go to the directory
 - Run `npm install`
 - Generate `tree.json` by running `node index.js`
 - Open `index.html`
