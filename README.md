@@ -6,11 +6,11 @@
 
 - Run `npm install`
 - Generate `tree.json` by running `node index.js`
-- Open `index.html`
+- Serve `index.html` as static content
 
 ## How to dev
 
-- Run `npm run watch`
+- Run `npm run dev`
 
 ## How to build
 

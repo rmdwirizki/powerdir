@@ -1,5 +1,5 @@
 class Connect
-  prop prefix default: '/powerdir/'
+  prop prefix default: window:location:pathname
 
   def timeout miliseconds=100, callback=null, resolveValue=null
     return Promise.new do |resolve|
