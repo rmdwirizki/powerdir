@@ -40,3 +40,4 @@
 - [x] Component based CSS
 - [ ] Service Worker
 - [ ] Server-side Rendering
+- [ ] Implement purgecss-webpack-plugin to reduce `bulma` size
