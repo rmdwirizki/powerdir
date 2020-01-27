@@ -1,9 +1,14 @@
 .ListItemBox {
+  margin-right: 20px;
   max-width: 250px;
   min-width: 250px;
-  margin-right: 20px;
 
-  &:last-child { min-width: 280px; max-width: 280px; }
+  &:last-child { 
+    min-width: calc(280px + ((100vw - 280px) / 2));
+    max-width: 280px;
+    padding-right: calc((100vw - 280px) / 2);
+  }
+
   .panel-container { 
     overflow: auto; 
     max-height: 414px; // Fallback
@@ -12,5 +17,24 @@
 
     .panel-block.has-description { display: block }
     .panel-block:last-child { border-bottom: 0px }
+  }
+
+  @media screen and (max-width: 400px) {
+    max-width: 90vw;
+    min-width: 90vw;
+
+    .panel-container {
+      max-height: calc(100vh - 220px - #{$scroller-height});
+    }
+
+    &:last-child { 
+      min-width: calc(90vw + ((100vw - 90vw) / 2));
+      max-width: 90vw;
+      padding-right: calc((100vw - 90vw) / 2);
+
+      .panel-container {
+        max-height: calc(100vh - 180px - #{$scroller-height});
+      }
+    }  
   }
 }

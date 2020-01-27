@@ -1,7 +1,23 @@
 .ReadItemBox {
   min-width: 750px; 
   max-width: 750px; 
-  &:last-child { min-width: 780px; max-width: 780px; }
+  
+  &:last-child { 
+    min-width: calc(780px + ((100vw - 780px) / 2));
+    max-width: 780px;
+    padding-right: calc((100vw - 780px) / 2);
+  }
+
+  @media screen and (max-width: 780px) {
+    max-width: 90vw;
+    min-width: 90vw;
+
+    &:last-child { 
+      min-width: calc(90vw + ((100vw - 90vw) / 2));
+      max-width: 90vw;
+      padding-right: calc((100vw - 90vw) / 2);
+    }  
+  }
   
   .panel-block { padding: 1em 1.25em; }
   .content { width: 100%; }

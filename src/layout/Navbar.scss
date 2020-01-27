@@ -1,15 +1,28 @@
 .Navbar {
+  
   .navbar {
     border-bottom: 2px solid;
     &.is-info { border-color: #3694d2; }
     &.is-link { border-color: #266cdd; }
   }
+  
+  .navbar-brand {
+    width: 100%;
+    justify-content: space-between;
+  }
+
   .navbar-item.is-logo {
     position: absolute;
-    left: 50%;
-    margin-left: -63px; // 50% in my case
     height: 100%;
-
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    // left: 50%;
+    // margin-left: -63px; // 50% in my case
+    
+    a {
+      display: flex;
+    }
     img {
       max-height: 2rem;
     }
@@ -20,5 +33,19 @@
   .navbar-item object {
     height: 100%;
     width: 100%;
+  }
+
+  @media screen and (max-width: 780px) {
+    .navbar-item > a.button {
+      padding-left: 6px;
+      padding-right: 6px;
+      background: transparent !important;
+    }
+    .navbar-item span.icon {
+      margin: 0 !important;
+    }
+    .navbar-item span.caption {
+      display: none;
+    }
   }
 }

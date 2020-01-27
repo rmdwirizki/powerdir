@@ -23,6 +23,7 @@ export tag SearchPanel
       Imba.commit
 
   def routeTo id
+    self.closeSearchPanel if window.matchMedia("(max-width: 400px)"):matches
     router.go '/' + id, { reload: false }
 
   def render
@@ -30,8 +31,8 @@ export tag SearchPanel
       <nav.is-link.navbar>
         <div.navbar-menu>
           <div.navbar-start>
-            <div.navbar-item.has-background-info>
-              <input[keyword] :keydown.search :paste.search type="text" placeholder="Search..." attr:spellcheck="false">
+            <div.navbar-item>
+              <input.input[keyword] :keydown.search :paste.search type="text" placeholder="Search..." attr:spellcheck="false">
           <div.navbar-end>
             <div.navbar-item>
               <a.button.has-background-info.has-text-white-bis :tap.prevent.closeSearchPanel>

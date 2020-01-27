@@ -5,7 +5,13 @@
   overflow-y: hidden;
   display: flex;
   flex-direction: column;
-  padding: 80px 30px 30px 30px;
+  padding: 55px 30px 30px 30px;
+
+  @media screen and (max-width: 400px) {
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 45px;
+  }
   
   &.scroll-on-top {
     flex-direction: column-reverse;

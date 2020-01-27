@@ -3,15 +3,36 @@
     align-items: flex-start;
     overflow: auto;
     max-height: 458px; // Fallback
-    max-height: calc(100vh - 220px - #{$scroller-height});
+    // max-height: calc(100vh - 220px - #{$scroller-height});
+    max-height: calc(100vh - 190px - #{$scroller-height});
     
     .panel-icon { line-height: inherit; padding-top: 2px; }
     &:first-child { border-top: 0px; }
     &.is-loading {
       min-height: 458px; // Fallback
-      min-height: calc(100vh - 220px - #{$scroller-height});
+      min-height: calc(100vh - 190px - #{$scroller-height});
       display: flex; justify-content: center; align-items: center
     }
   }
-  &:last-child { padding-right: 30px }
+  &:last-child { 
+    padding-right: 30px;
+
+    @media screen and (max-width: 400px) {
+      & .panel .panel-heading {
+        display: none;
+      }
+      & .panel .panel-block {
+        border-top: 1px solid;
+        border-color: #dbdbdb;
+        border-radius: 4px 4px 0 0;
+      }
+      & .panel-block {
+        max-height: calc(100vh - 135px - #{$scroller-height});
+
+        &.is-loading {
+          max-height: calc(100vh - 135px - #{$scroller-height});
+        }
+      }
+    }
+  }
 }

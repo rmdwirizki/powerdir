@@ -1,5 +1,6 @@
 .SearchPanel {
   &.is-closed { display: none; }
+
   position: absolute;
   z-index: 30;
   top: 0;
@@ -9,18 +10,37 @@
   background: #fff;
   box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
 
+  @media screen and (max-width: 400px) {
+    width: 100%;
+  }
+
   nav {
-    .navbar-start > .navbar-item {
-      margin: 0.5rem 0.75rem;
+    .navbar-menu {
+      width: 100%;
+      display: flex;
+      background: transparent;
+      padding: 0;
+
+      .navbar-start {
+        margin-right: 0;
+        flex-grow: 1;
+
+        .navbar-item {
+          background: transparent;
+          width: 95%;
+          padding: 0px;
+          margin: 0.5rem 0.75rem;
+        }
+      }
     }
     & input {
-      background: transparent;
+      background: #fff;
       border:none;
       outline: none;
-      color: #fff;
+      // color: #000;
       font-size: 1em;
       &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-        color: #fff;
+        // color: #000;
       }
     }
   }
