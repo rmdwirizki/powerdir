@@ -12,3 +12,7 @@ $sides: (top, bottom, left, right); // Leave this variable alone
     }
   }
 }
+
+html, body, .App, .Home, .boxes, .ItemBox, .ReadItemBox .panel {
+	height: 100%;
+}
