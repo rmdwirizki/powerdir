@@ -29,8 +29,25 @@ export tag Boxes < Scroller
 
     Connect.timeout 100, do
       const scrollLeft = @domScroll:scrollWidth - @offsetWidth
-      @domScroll:scrollLeft = scrollLeft
-      @syncedScroller:scrollLeft = scrollLeft
+
+      # Smooth Scrolling
+
+      const duration = 200
+
+      const startLocation = @domScroll:scrollLeft;
+      const endLocation = scrollLeft;
+      const distance = endLocation - startLocation;
+      const increments = distance / (duration / 16);
+      
+      let runAnimation
+
+      const animateScroll = do
+        @domScroll.scrollBy increments, 0
+        if @domScroll:scrollLeft >= endLocation
+          clearInterval runAnimation
+          @syncedScroller:scrollLeft = scrollLeft
+
+      runAnimation = setInterval animateScroll, 16
 
   def onboxloaded
     self.sync
